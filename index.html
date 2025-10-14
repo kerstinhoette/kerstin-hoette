@@ -159,6 +159,12 @@ h2 { font-size: clamp(20px, 3vw, 26px); margin: 18px 0 8px; }
         This page is intentionally minimal: it links to my up-to-date CV and provides a short overview
         while I build a fuller website. Feel free to reach out by email.
       </p>
+
+       <section id="pubs">
+    <h2>Selected publications</h2>
+    <div id="pub-list" class="pub-list" aria-busy="true">Loading…</div>
+    <p class="sub" id="pub-footnote" style="margin-top:8px;"></p>
+  </section>
     </main>
 
     <footer>
@@ -230,5 +236,97 @@ h2 { font-size: clamp(20px, 3vw, 26px); margin: 18px 0 8px; }
       } catch(e){ /* ignore */ }
     })();
   </script>
+
+  <script>
+/**
+ * Auto-list publications with Semantic Scholar (no server needed).
+ * 1) Search author by name (handles "Hötte" and "Hotte")
+ * 2) Fetch papers for the best-matching author
+ */
+(async function loadPublications() {
+  const AUTHOR_NAMES = ["Kerstin Hötte", "Kerstin Hotte"]; // name + ASCII variant
+  const AFFILIATION_HINT = "Kedge"; // optional: helps pick the right author if there are homonyms
+
+  const el = document.getElementById("pub-list");
+  const foot = document.getElementById("pub-footnote");
+
+  function normalize(s){ return (s||"").toLowerCase(); }
+  function scoreAuthor(a){
+    // simple heuristic: name match + affiliation hint in url if present
+    let s = 0;
+    const n = normalize(a.name || "");
+    if (AUTHOR_NAMES.some(x => normalize(x) === n)) s += 2;
+    if ((a.aliases||[]).some(al => AUTHOR_NAMES.map(normalize).includes(normalize(al)))) s += 1;
+    if (AFFILIATION_HINT && normalize(a.url||"").includes(normalize(AFFILIATION_HINT))) s += 1;
+    return s;
+  }
+
+  // Try each name until we get candidates
+  let author = null;
+  for (const q of AUTHOR_NAMES) {
+    const res = await fetch(`https://api.semanticscholar.org/graph/v1/author/search?query=${encodeURIComponent(q)}&limit=5`);
+    if (!res.ok) continue;
+    const data = await res.json();
+    const best = (data?.data || []).sort((a,b) => scoreAuthor(b) - scoreAuthor(a))[0];
+    if (best) { author = best; break; }
+  }
+  if (!author) {
+    el.innerHTML = `Couldn’t locate your author record automatically.
+      <a href="https://www.semanticscholar.org/search?q=${encodeURIComponent(AUTHOR_NAMES[0])}" target="_blank" rel="noopener">Search on Semantic Scholar</a>`;
+    el.removeAttribute("aria-busy");
+    return;
+  }
+
+  // Fetch papers for the chosen author
+  const FIELDS = [
+    "papers.title","papers.year","papers.venue",
+    "papers.externalIds","papers.url","papers.citationCount","papers.authors"
+  ].join(",");
+  const authorDetailRes = await fetch(`https://api.semanticscholar.org/graph/v1/author/${author.authorId}?fields=${encodeURIComponent(FIELDS)}`);
+  if (!authorDetailRes.ok) {
+    el.textContent = "Failed to fetch publications.";
+    el.removeAttribute("aria-busy");
+    return;
+  }
+  const authorDetail = await authorDetailRes.json();
+  const papers = (authorDetail.papers || [])
+    .filter(p => p.title)
+    .sort((a,b) => (b.year||0) - (a.year||0))
+    .slice(0, 10);
+
+  if (!papers.length) {
+    el.textContent = "No publications found.";
+    el.removeAttribute("aria-busy");
+    return;
+  }
+
+  // Bold your name in the author list:
+  const myNames = AUTHOR_NAMES.map(n => n.toLowerCase());
+  function highlightAuthors(list){
+    return (list||[]).map(a => {
+      const n = a.name || "";
+      return myNames.includes(n.toLowerCase()) ? `<strong>${n}</strong>` : n;
+    }).join(", ");
+  }
+
+  el.innerHTML = papers.map(p => {
+    const url = p.url || (p.externalIds?.DOI ? `https://doi.org/${p.externalIds.DOI}` : "#");
+    const venue = p.venue || "—";
+    const year = p.year || "";
+    const doi = p.externalIds?.DOI ? ` · DOI:${p.externalIds.DOI}` : "";
+    const cites = (typeof p.citationCount === "number") ? ` · Citations:${p.citationCount}` : "";
+    return `
+      <article class="pub">
+        <a href="${url}" target="_blank" rel="noopener">${p.title}</a>
+        <div class="meta">${highlightAuthors(p.authors)}</div>
+        <div class="meta">${venue} · ${year}${doi}${cites}</div>
+      </article>`;
+  }).join("");
+
+  foot.textContent = "Source: Semantic Scholar";
+  el.removeAttribute("aria-busy");
+})();
+</script>
+
 </body>
 </html>
