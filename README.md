@@ -1,13 +1,9 @@
-# Personal site (two-page)
+# Personal site (publications compiled from LaTeX)
 
-- `index.html` — home with photo, links to Google Scholar and ORCID, and nav to Publications.
-- `publications.html` — publications list parsed from CV (best-effort). If parsing failed, it links to CV/Scholar/ORCID.
-- `cv.pdf` — current CV.
-
-## Add your real photo
-Replace `me.jpg` in the repo root with your headshot (ideally a square 800×800).
+- `index.html` — home with photo, and links to Publications, Google Scholar, and ORCID.
+- `publications.html` — publications page compiled from your LaTeX CV (as provided). No Semantic Scholar.
+- `cv.pdf` — your CV.
+- `me.jpg` — placeholder (replace with your headshot).
 
 ## Deploy
-Upload all files to your GitHub Pages repo (user site or project site).
-
-© 2025 Kerstin Hötte
+Upload these files to your GitHub Pages repo. Publications live at `publications.html`.
