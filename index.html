@@ -110,12 +110,31 @@
       .card { box-shadow: none; border: none; }
       .btn, .theme-toggle { display: none; }
     }
+    .avatar {
+  width: 128px; height: 128px; border-radius: 50%;
+  object-fit: cover; border: 2px solid var(--border);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  margin: 10px 0;
+}
+/* Publications section */
+h2 { font-size: clamp(20px, 3vw, 26px); margin: 18px 0 8px; }
+.pub-list { display: grid; gap: 10px; }
+.pub {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px; padding: 12px;
+}
+.pub a { text-decoration: none; }
+.pub .meta { color: var(--muted); font-size: 14px; margin-top: 4px; }
+
+    
   </style>
 </head>
 <body>
   <article class="card" role="main">
     <header>
       <h1>Kerstin Hötte</h1>
+      <img src="./me.jpg" alt="Kerstin Hötte" class="avatar" width="128" height="128" loading="lazy" />
       <div class="sub">Economist · Technological change · Climate &amp; digital transformation</div>
       <div class="badges">
         <span class="badge">Assistant Professor · Kedge Business School (Paris)</span>
