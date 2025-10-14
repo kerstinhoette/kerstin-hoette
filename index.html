@@ -5,129 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kerstin Hötte — Economist</title>
   <meta name="description" content="Kerstin Hötte — economist focused on technological change, climate and digital transformation. Assistant Professor, Kedge Business School, Paris." />
-  <meta property="og:title" content="Kerstin Hötte — Economist" />
-  <meta property="og:description" content="Economist focused on technological change, climate and digital transformation. Assistant Professor, Kedge Business School, Paris." />
   <meta name="color-scheme" content="light dark" />
   <style>
-    :root {
-      --bg: #ffffff;
-      --fg: #0f172a; /* slate-900 */
-      --muted: #475569; /* slate-600 */
-      --link: #0ea5e9; /* sky-500 */
-      --card: #f8fafc; /* slate-50 */
-      --border: #e2e8f0; /* slate-200 */
-      --btn: #111827;
-      --btn-fg: #ffffff;
-    }
+    :root { --bg:#fff; --fg:#0f172a; --muted:#475569; --link:#0ea5e9; --card:#f8fafc; --border:#e2e8f0; --btn:#111827; --btn-fg:#fff; }
     @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #0b1220;
-        --fg: #e5e7eb;
-        --muted: #94a3b8;
-        --link: #38bdf8;
-        --card: #0f172a;
-        --border: #1f2937;
-        --btn: #1f2937;
-        --btn-fg: #e5e7eb;
-      }
+      :root { --bg:#0b1220; --fg:#e5e7eb; --muted:#94a3b8; --link:#38bdf8; --card:#0f172a; --border:#1f2937; --btn:#1f2937; --btn-fg:#e5e7eb; }
     }
-    /* Force theme when data-theme is explicitly set */
-    [data-theme="dark"] {
-      --bg: #0b1220;
-      --fg: #e5e7eb;
-      --muted: #94a3b8;
-      --link: #38bdf8;
-      --card: #0f172a;
-      --border: #1f2937;
-      --btn: #1f2937;
-      --btn-fg: #e5e7eb;
-    }
-    [data-theme="light"] {
-      --bg: #ffffff;
-      --fg: #0f172a;
-      --muted: #475569;
-      --link: #0ea5e9;
-      --card: #f8fafc;
-      --border: #e2e8f0;
-      --btn: #111827;
-      --btn-fg: #ffffff;
-    }
-
-    html, body { height: 100%; }
-    body {
-      margin: 0; font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      background: radial-gradient(1200px 600px at 20% -10%, rgba(14,165,233,0.12), transparent 60%),
-                  radial-gradient(800px 400px at 110% 0%, rgba(16,185,129,0.12), transparent 50%),
-                  var(--bg);
-      color: var(--fg);
-      display: grid;
-      place-items: center;
-      padding: 32px 16px;
-    }
-    .card {
-      width: min(900px, 100%);
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 28px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    }
-    header { display: grid; gap: 4px; }
-    h1 { font-size: clamp(28px, 4vw, 40px); line-height: 1.15; margin: 0; }
-    .sub { color: var(--muted); margin-bottom: 8px; }
-    .badges { display: flex; gap: 10px; flex-wrap: wrap; margin: 12px 0 4px; }
-    .badge {
-      display: inline-flex; align-items: center; gap: 8px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.6);
-      padding: 6px 10px; border-radius: 999px; font-size: 14px;
-      backdrop-filter: blur(4px);
-    }
-    @media (prefers-color-scheme: dark){ .badge { background: rgba(0,0,0,0.2);} }
-
-    .actions { display: flex; gap: 12px; flex-wrap: wrap; margin: 18px 0 6px; align-items: center; }
-    .btn {
-      appearance: none; border: 1px solid var(--border); background: var(--btn); color: var(--btn-fg);
-      padding: 10px 14px; border-radius: 12px; text-decoration: none; font-weight: 600;
-    }
-    .btn.secondary { background: transparent; color: var(--fg); }
-    .btn:hover { transform: translateY(-1px); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
-
-    .theme-toggle {
-      display: inline-flex; align-items: center; gap: 8px; cursor: pointer; user-select: none;
-      border: 1px solid var(--border); padding: 8px 12px; border-radius: 12px; background: transparent;
-      font-weight: 600;
-    }
-
-    main { margin-top: 18px; }
-    p { margin: 0 0 12px; }
-
-    footer { margin-top: 18px; color: var(--muted); font-size: 14px; }
-    a { color: var(--link); }
-
-    @media print {
-      body { background: #fff; }
-      .card { box-shadow: none; border: none; }
-      .btn, .theme-toggle { display: none; }
-    }
-    .avatar {
-  width: 128px; height: 128px; border-radius: 50%;
-  object-fit: cover; border: 2px solid var(--border);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-  margin: 10px 0;
-}
-/* Publications section */
-h2 { font-size: clamp(20px, 3vw, 26px); margin: 18px 0 8px; }
-.pub-list { display: grid; gap: 10px; }
-.pub {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px; padding: 12px;
-}
-.pub a { text-decoration: none; }
-.pub .meta { color: var(--muted); font-size: 14px; margin-top: 4px; }
-
-    
+    [data-theme="dark"] { --bg:#0b1220; --fg:#e5e7eb; --muted:#94a3b8; --link:#38bdf8; --card:#0f172a; --border:#1f2937; --btn:#1f2937; --btn-fg:#e5e7eb; }
+    [data-theme="light"] { --bg:#fff; --fg:#0f172a; --muted:#475569; --link:#0ea5e9; --card:#f8fafc; --border:#e2e8f0; --btn:#111827; --btn-fg:#fff; }
+    html,body{height:100%} body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial; background:radial-gradient(1200px 600px at 20% -10%, rgba(14,165,233,.12), transparent 60%), radial-gradient(800px 400px at 110% 0%, rgba(16,185,129,.12), transparent 50%), var(--bg); color:var(--fg); display:grid; place-items:center; padding:32px 16px;}
+    .card{width:min(900px,100%); background:var(--card); border:1px solid var(--border); border-radius:20px; padding:28px; box-shadow:0 10px 25px rgba(0,0,0,.08);}
+    header{display:grid;gap:4px} h1{font-size:clamp(28px,4vw,40px);line-height:1.15;margin:0} .sub{color:var(--muted);margin-bottom:8px}
+    nav{display:flex; gap:12px; flex-wrap:wrap; margin:6px 0 10px;}
+    .navlink{text-decoration:none; font-weight:600; border:1px solid var(--border); padding:6px 10px; border-radius:10px;}
+    .actions{display:flex; gap:12px; flex-wrap:wrap; margin:12px 0 6px; align-items:center}
+    .btn{appearance:none;border:1px solid var(--border); background:var(--btn); color:var(--btn-fg); padding:10px 14px; border-radius:12px; text-decoration:none; font-weight:600}
+    .btn.secondary{background:transparent;color:var(--fg)}
+    .theme-toggle{display:inline-flex; align-items:center; gap:8px; cursor:pointer; user-select:none; border:1px solid var(--border); padding:8px 12px; border-radius:12px; background:transparent; font-weight:600}
+    main{margin-top:18px} p{margin:0 0 12px}
+    footer{margin-top:18px;color:var(--muted);font-size:14px}
+    a{color:var(--link)}
+    .avatar{width:128px;height:128px;border-radius:50%;object-fit:cover;border:2px solid var(--border); box-shadow:0 6px 16px rgba(0,0,0,.12); margin:10px 0}
   </style>
 </head>
 <body>
@@ -136,10 +34,11 @@ h2 { font-size: clamp(20px, 3vw, 26px); margin: 18px 0 8px; }
       <h1>Kerstin Hötte</h1>
       <img src="./me.jpg" alt="Kerstin Hötte" class="avatar" width="128" height="128" loading="lazy" />
       <div class="sub">Economist · Technological change · Climate &amp; digital transformation</div>
-      <div class="badges">
-        <span class="badge">Assistant Professor · Kedge Business School (Paris)</span>
-        <span class="badge">Oxford Martin Fellow</span>
-      </div>
+      <nav>
+        <a class="navlink" href="./publications.html">Publications</a>
+        <a class="navlink" href="https://scholar.google.com/citations?user=XDDDizoAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+        <a class="navlink" href="https://orcid.org/0000-0002-8633-4225" target="_blank" rel="noopener">ORCID: 0000-0002-8633-4225</a>
+      </nav>
       <div class="actions">
         <a class="btn" href="./cv.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
         <a class="btn secondary" href="mailto:kerstin.hotte@kedgebs.com">Email</a>
@@ -147,186 +46,17 @@ h2 { font-size: clamp(20px, 3vw, 26px); margin: 18px 0 8px; }
         <button id="toggle" class="theme-toggle" type="button" aria-label="Toggle color theme">🌓 Theme</button>
       </div>
     </header>
-
     <main>
-      <p>
-        I am an economist researching how technological change reshapes economies and societies,
-        especially in the context of climate action and the digital transition. My work combines
-        quantitative empirical analysis with theoretical modeling. I currently serve as Assistant Professor
-        of Ecological Economics at Kedge Business School in Paris and as an Oxford Martin Fellow.
-      </p>
-      <p>
-        This page is intentionally minimal: it links to my up-to-date CV and provides a short overview
-        while I build a fuller website. Feel free to reach out by email.
-      </p>
-
-       <section id="pubs">
-    <h2>Selected publications</h2>
-    <div id="pub-list" class="pub-list" aria-busy="true">Loading…</div>
-    <p class="sub" id="pub-footnote" style="margin-top:8px;"></p>
-  </section>
+      <p>I am an economist researching how technological change reshapes economies and societies, especially for climate action and the digital transition. I am Assistant Professor of Ecological Economics at Kedge Business School (Paris) and an Oxford Martin Fellow.</p>
+      <p>This site is intentionally minimal. For publications, see the dedicated page or my Google Scholar/ORCID profiles.</p>
     </main>
-
-    <footer>
-      © <span id="y"></span> Kerstin Hötte
-    </footer>
+    <footer>© <span id="y"></span> Kerstin Hötte</footer>
   </article>
-
   <script>
-    // --- Dark mode toggle ---
-    (function () {
-      const root = document.documentElement;
-      const KEY = "theme";
-      const btn = document.getElementById("toggle");
-      const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-      function apply(theme) {
-        // theme: "light" | "dark" | "system"
-        root.setAttribute("data-theme", theme);
-        btn.textContent = (theme === "dark") ? "🌙 Dark" : (theme === "light") ? "☀️ Light" : "🌓 System";
-      }
-
-      function cycle() {
-        const current = root.getAttribute("data-theme") || "system";
-        const next = current === "system" ? (prefersDark ? "light" : "dark") : (current === "dark" ? "light" : "system");
-        localStorage.setItem(KEY, next);
-        apply(next);
-      }
-
-      const saved = localStorage.getItem(KEY);
-      if (saved) apply(saved); else apply("system");
-      btn.addEventListener("click", cycle);
-    })();
-
-    // Footer year
-    document.getElementById('y').textContent = new Date().getFullYear();
+    (function () { const root=document.documentElement,KEY="theme",btn=document.getElementById("toggle");function apply(t){root.setAttribute("data-theme",t);btn.textContent=t==="dark"?"🌙 Dark":t==="light"?"☀️ Light":"🌓 System";}function cycle(){const c=root.getAttribute("data-theme")||"system";const n=c==="system"?(window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches? "light":"dark"):(c==="dark"?"light":"system");localStorage.setItem(KEY,n);apply(n);}const saved=localStorage.getItem(KEY);apply(saved||"system");btn.addEventListener("click",cycle);})(); document.getElementById('y').textContent=new Date().getFullYear(); 
   </script>
-
-  <!--
-    --- Privacy-friendly analytics stub ---
-    By default, this tiny script only logs a pageview to the console.
-    To use a hosted privacy-first analytics service later (e.g., Plausible or Fathom),
-    replace the stub with their script tag. Examples:
-
-    PLAUSIBLE (replace example.com with your domain):
-    <script defer data-domain="example.com" src="https://plausible.io/js/script.js"></script>
-
-    FATHOM:
-    <script src="https://cdn.usefathom.com/script.js" data-site="YOUR-CODE" defer></script>
-
-    If you keep the stub below, you can set window.ENABLE_ANALYTICS=true to send a beacon
-    to your own endpoint (see analytics.js for details).
-  -->
   <script>
-    // Minimal, local, no-op analytics with an optional beacon
-    (function(){
-      const ENABLE_ANALYTICS = window.ENABLE_ANALYTICS === true; // set to true to enable beacon
-      const payload = {
-        t: Date.now(),
-        path: location.pathname + location.search,
-        ref: document.referrer || null,
-        ua: navigator.userAgent
-      };
-      try {
-        console.log("[analytics] pageview", payload);
-        if (ENABLE_ANALYTICS && navigator.sendBeacon) {
-          // Replace /analytics with your endpoint path if you self-host.
-          navigator.sendBeacon("/analytics", JSON.stringify(payload));
-        }
-      } catch(e){ /* ignore */ }
-    })();
+    (function(){const payload={t:Date.now(),path:location.pathname+location.search,ref:document.referrer||null,ua:navigator.userAgent};console.log("[analytics] pageview",payload);})();
   </script>
-
-  <script>
-/**
- * Auto-list publications with Semantic Scholar (no server needed).
- * 1) Search author by name (handles "Hötte" and "Hotte")
- * 2) Fetch papers for the best-matching author
- */
-(async function loadPublications() {
-  const AUTHOR_NAMES = ["Kerstin Hötte", "Kerstin Hotte"]; // name + ASCII variant
-  const AFFILIATION_HINT = "Kedge"; // optional: helps pick the right author if there are homonyms
-
-  const el = document.getElementById("pub-list");
-  const foot = document.getElementById("pub-footnote");
-
-  function normalize(s){ return (s||"").toLowerCase(); }
-  function scoreAuthor(a){
-    // simple heuristic: name match + affiliation hint in url if present
-    let s = 0;
-    const n = normalize(a.name || "");
-    if (AUTHOR_NAMES.some(x => normalize(x) === n)) s += 2;
-    if ((a.aliases||[]).some(al => AUTHOR_NAMES.map(normalize).includes(normalize(al)))) s += 1;
-    if (AFFILIATION_HINT && normalize(a.url||"").includes(normalize(AFFILIATION_HINT))) s += 1;
-    return s;
-  }
-
-  // Try each name until we get candidates
-  let author = null;
-  for (const q of AUTHOR_NAMES) {
-    const res = await fetch(`https://api.semanticscholar.org/graph/v1/author/search?query=${encodeURIComponent(q)}&limit=5`);
-    if (!res.ok) continue;
-    const data = await res.json();
-    const best = (data?.data || []).sort((a,b) => scoreAuthor(b) - scoreAuthor(a))[0];
-    if (best) { author = best; break; }
-  }
-  if (!author) {
-    el.innerHTML = `Couldn’t locate your author record automatically.
-      <a href="https://www.semanticscholar.org/search?q=${encodeURIComponent(AUTHOR_NAMES[0])}" target="_blank" rel="noopener">Search on Semantic Scholar</a>`;
-    el.removeAttribute("aria-busy");
-    return;
-  }
-
-  // Fetch papers for the chosen author
-  const FIELDS = [
-    "papers.title","papers.year","papers.venue",
-    "papers.externalIds","papers.url","papers.citationCount","papers.authors"
-  ].join(",");
-  const authorDetailRes = await fetch(`https://api.semanticscholar.org/graph/v1/author/${author.authorId}?fields=${encodeURIComponent(FIELDS)}`);
-  if (!authorDetailRes.ok) {
-    el.textContent = "Failed to fetch publications.";
-    el.removeAttribute("aria-busy");
-    return;
-  }
-  const authorDetail = await authorDetailRes.json();
-  const papers = (authorDetail.papers || [])
-    .filter(p => p.title)
-    .sort((a,b) => (b.year||0) - (a.year||0))
-    .slice(0, 10);
-
-  if (!papers.length) {
-    el.textContent = "No publications found.";
-    el.removeAttribute("aria-busy");
-    return;
-  }
-
-  // Bold your name in the author list:
-  const myNames = AUTHOR_NAMES.map(n => n.toLowerCase());
-  function highlightAuthors(list){
-    return (list||[]).map(a => {
-      const n = a.name || "";
-      return myNames.includes(n.toLowerCase()) ? `<strong>${n}</strong>` : n;
-    }).join(", ");
-  }
-
-  el.innerHTML = papers.map(p => {
-    const url = p.url || (p.externalIds?.DOI ? `https://doi.org/${p.externalIds.DOI}` : "#");
-    const venue = p.venue || "—";
-    const year = p.year || "";
-    const doi = p.externalIds?.DOI ? ` · DOI:${p.externalIds.DOI}` : "";
-    const cites = (typeof p.citationCount === "number") ? ` · Citations:${p.citationCount}` : "";
-    return `
-      <article class="pub">
-        <a href="${url}" target="_blank" rel="noopener">${p.title}</a>
-        <div class="meta">${highlightAuthors(p.authors)}</div>
-        <div class="meta">${venue} · ${year}${doi}${cites}</div>
-      </article>`;
-  }).join("");
-
-  foot.textContent = "Source: Semantic Scholar";
-  el.removeAttribute("aria-busy");
-})();
-</script>
-
 </body>
 </html>
