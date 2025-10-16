@@ -6,26 +6,34 @@
   <title>Research — Kerstin Hötte</title>
   <meta name="color-scheme" content="light dark" />
   <style>
-    :root { --bg:#fff; --fg:#0f172a; --muted:#475569; --link:#0ea5e9; --card:#f8fafc; --border:#e2e8f0; }
-    @media (prefers-color-scheme: dark) { :root { --bg:#0b1220; --fg:#e5e7eb; --muted:#94a3b8; --link:#38bdf8; --card:#0f172a; --border:#1f2937; } }
+  :root { --bg:#fff; --fg:#0f172a; --muted:#475569; --link:#0ea5e9; --card:#f8fafc; --border:#e2e8f0; --btn:#111827; --btn-fg:#fff; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#0b1220; --fg:#e5e7eb; --muted:#94a3b8; --link:#38bdf8; --card:#0f172a; --border:#1f2937; --btn:#1f2937; --btn-fg:#e2e8f0; }
+  }
+  [data-theme="dark"] { --bg:#0b1220; --fg:#e5e7eb; --muted:#94a3b8; --link:#38bdf8; --card:#0f172a; --border:#1f2937; --btn:#1f2937; --btn-fg:#e2e8f0; }
+  [data-theme="light"] { --bg:#fff; --fg:#0f172a; --muted:#475569; --link:#0ea5e9; --card:#f8fafc; --border:#e2e8f0; --btn:#111827; --btn-fg:#fff; }
 
-    body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial; background:var(--bg); color:var(--fg);}
-    .wrap{max-width:980px;margin:0 auto;padding:24px}
-    header a{text-decoration:none; font-weight:600; color:var(--link)}
-    h1{margin:0 0 8px} .sub{color:var(--muted); margin:0 0 16px}
-    h2{margin:22px 0 10px; font-size:clamp(20px,3vw,26px)}
-    h3{margin:18px 0 6px; font-size:clamp(18px,2.6vw,22px)}
-    p{margin:0 0 10px}
-    .grid{display:grid; gap:12px}
-    .card{background:var(--card); border:1px solid var(--border); border-radius:12px; padding:14px}
-    .subtle{color:var(--muted)}
-    .pill{display:inline-block; border:1px solid var(--border); border-radius:999px; padding:4px 10px; margin-right:8px; font-weight:600; text-decoration:none}
-    .publist{display:grid; gap:10px; padding-left:18px}
-    .publist li{background:var(--card); border:1px solid var(--border); border-radius:12px; padding:12px; list-style:disc}
-    footer{margin-top:24px; color:var(--muted); font-size:14px}
-  </style>
+  body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial; background:var(--bg); color:var(--fg);}
+  .wrap{max-width:980px;margin:0 auto;padding:24px}
+  header a{text-decoration:none; font-weight:600; color:var(--link)}
+  h1{margin:0 0 8px} .sub{color:var(--muted); margin:0 0 16px}
+  h2{margin:22px 0 10px; font-size:clamp(20px,3vw,26px)}
+  h3{margin:18px 0 6px; font-size:clamp(18px,2.6vw,22px)}
+  p{margin:0 0 10px}
+  .grid{display:grid; gap:12px}
+  .card{background:var(--card); border:1px solid var(--border); border-radius:12px; padding:14px}
+  .subtle{color:var(--muted)}
+  .pill{display:inline-block; border:1px solid var(--border); border-radius:999px; padding:4px 10px; margin-right:8px; font-weight:600; text-decoration:none}
+  .publist{display:grid; gap:10px; padding-left:18px}
+  .publist li{background:var(--card); border:1px solid var(--border); border-radius:12px; padding:12px; list-style:disc}
+  .btn{appearance:none;border:1px solid var(--border); background:var(--btn); color:var(--btn-fg);
+       padding:8px 12px; border-radius:10px; text-decoration:none; font-weight:600}
+  .btn.secondary{background:transparent;color:var(--fg)}
+  .theme-toggle{display:inline-flex; align-items:center; gap:8px; cursor:pointer; user-select:none;
+       border:1px solid var(--border); padding:6px 10px; border-radius:10px; background:transparent; font-weight:600}
+  footer{margin-top:24px; color:var(--muted); font-size:14px}
+</style>
 </head>
-
 <body>
   <div class="wrap" role="main">
     <header>
@@ -35,39 +43,42 @@
          <a href="https://scholar.google.com/citations?user=XDDDizoAAAAJ" target="_blank" rel="noopener">Google Scholar</a> ·
          <a href="https://orcid.org/0000-0002-8633-4225" target="_blank" rel="noopener">ORCID</a> ·
          <a href="./cv.pdf" target="_blank" rel="noopener">CV (PDF)</a></p>
+      <button id="toggle" class="theme-toggle" type="button" aria-label="Toggle color theme">🌓 System</button>
     </header>
 
     <main class="grid">
 
-      <!-- (1) PAYMENT DATA RESEARCH -->
       <section class="card" id="payment-data">
         <h2>1) Payment data research</h2>
         <p>
-          Real-time, high-granularity **inter-industry payment data** to measure economic activity,
-          map production networks, and nowcast GDP. In joint projects, my colleagues and I are currently working on novel economic netwwork-based applications in the areas of nowcasting and tracing structural changes. I also **host a bimonthly “Payment Data Research” seminar series** —
+          Real-time, high-granularity <strong>inter-industry payment data</strong> to measure economic activity,
+          map production networks, and <strong>nowcast GDP</strong>. I also host a <strong>bimonthly “Payment Data Research” seminar series</strong> —
           if you’d like to present or attend, please <a href="mailto:kerstin.hotte@kedgebs.com">get in touch</a>.
         </p>
         <h3>Key outputs</h3>
         <ul class="publist">
           <li>
-            <strong>GDP nowcasting with large-scale inter-industry payment data — a network approach</strong> (with Mantziou, Cucuringu, Reinert).
+            <strong>Economic nowcasting with large-scale inter-industry payment data — a network approach</strong>
+            (with <a href="https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/mantziou/" target="_blank" rel="noopener">Anastasia Mantziou</a>,
+            <a href="https://www.stats.ox.ac.uk/~cucuring/" target="_blank" rel="noopener">Mihai Cucuringu</a>,
+            <a href="https://www.stats.ox.ac.uk/~reinert/" target="_blank" rel="noopener">Gesine Reinert</a>).
             <a href="https://arxiv.org/abs/2411.02029" target="_blank" rel="noopener">arXiv:2411.02029</a>.
             <div class="subtle">
-              Introduces GNAR-ex, a network time-series model on UK monthly industry-to-industry payments; improves macro & industry-level nowcasts.
+              Introduces GNAR‑ex, a network time‑series model on UK monthly industry‑to‑industry payments; improves macro & industry‑level nowcasts.
             </div>
           </li>
           <li>
-            <strong>Mapping the disaggregated economy in real-time</strong> — Economic Systems Research (2025).
+            <strong>Mapping the disaggregated economy in real time</strong> — Economic Systems Research (2025).
             <a href="https://www.tandfonline.com/doi/full/10.1080/09535314.2025.2518944" target="_blank" rel="noopener">Article</a>.
             <div class="subtle">
-              Benchmarks five-digit SIC payment flows against GDP & input–output tables; discusses how to interpret bottom-up payments vis-à-vis national accounts.
+              Benchmarks fine‑grained payment flows against GDP and input–output tables; guidance on aligning bottom‑up transactions with national accounts.
             </div>
           </li>
           <li>
             <strong>National accounting from the bottom up using financial transactions data</strong> (with Naddeo).
             <a href="https://arxiv.org/abs/2407.14776" target="_blank" rel="noopener">arXiv:2407.14776</a>.
             <div class="subtle">
-              Concept & validation for constructing monthly inter-industry flows from anonymised UK business payments (2015–2023).
+              Concept and validation for constructing monthly inter‑industry flows from anonymised UK business payments (2015–2023).
             </div>
           </li>
         </ul>
@@ -81,95 +92,80 @@
         </p>
       </section>
 
-      <!-- (2) PATENT CLASSIFICATION PROJECTS -->
       <section class="card" id="patent-classification">
         <h2>2) Patent classification projects</h2>
         <p>
-          Ongoing work with **Nic Barbieri** on how reclassifications, CPC adoption and quality thresholds
-          reshape what we call “green” innovation — and how that affects evidence & policy. In follow-on research, we are currently exploiting reclassification dynamics in patent systems to understand how efficient categorizations can promote the diffusion of technological knowledge. 
+          Ongoing work with <a href="https://scholar.google.com/citations?hl=en&user=M1EuuKQAAAAJ" target="_blank" rel="noopener">Nicolò Barbieri</a>
+          and <a href="https://research.tue.nl/en/persons/peter-persoon" target="_blank" rel="noopener">Peter G.J. Persoon</a> on how reclassifications,
+          CPC adoption and quality thresholds reshape what we call “green” innovation — and how that affects evidence & policy.
         </p>
         <p>
           <a class="pill" href="https://arxiv.org/abs/2503.21310" target="_blank" rel="noopener">The evolving boundary of green technology (preprint)</a>
         </p>
-
-        <h3>Related publications</h3>
+        <h3>Related publications (concise)</h3>
         <ul class="publist">
-          <li>
-            Hötte &amp; Jee (2022) <em>Knowledge for a warmer world: a patent analysis of climate change adaptation technologies</em>, TFSC.
-            <a href="https://doi.org/10.1016/j.techfore.2022.121879" target="_blank" rel="noopener">DOI</a>
-          </li>
-          <li>
-            Hötte (2023) <em>Demand-pull, technology-push, and the direction of technological change</em>, Research Policy.
-            <a href="https://doi.org/10.1016/j.respol.2023.104740" target="_blank" rel="noopener">DOI</a>
-          </li>
+          <li>Hötte &amp; Jee (2022) <em>Knowledge for a warmer world: a patent analysis of climate change adaptation technologies</em>, TFSC.
+            <a href="https://doi.org/10.1016/j.techfore.2022.121879" target="_blank" rel="noopener">DOI</a></li>
+          <li>Hötte (2023) <em>Demand‑pull, technology‑push, and the direction of technological change</em>, Research Policy.
+            <a href="https://doi.org/10.1016/j.respol.2023.104740" target="_blank" rel="noopener">DOI</a></li>
         </ul>
       </section>
 
-      <!-- (3) INDUSTRIAL ARCHITECTURE & SUPPLY CHAINS -->
       <section class="card" id="industrial-architecture">
         <h2>3) Industrial architecture & supply chain networks</h2>
-        <p>
-          My colleague **Su Jung Jee** and I are currently building datasets and methods to trace technological path-dependencies and
-          country-level specialisation trajectories using **multi-regional product-by-product input–output tables** applying methods to cluster industrial architectures in directed networks.
-        </p>
+        <p><strong>Placeholder.</strong> Tracing technological path‑dependencies and specialisation trajectories using
+        <strong>multi‑regional product‑by‑product input–output</strong> tables. Collaborators and data partners welcome —
+        <a href="mailto:kerstin.hotte@kedgebs.com">contact me</a>.</p>
       </section>
 
-      <!-- (4) TECHNOLOGICAL CHANGE & DEVELOPMENT -->
       <section class="card" id="tech-change-development">
         <h2>4) Technological change & economic development</h2>
-        <p>
-          Using patent-citation networks and qualitative empirical insights, my colleagues and I were studying how frugal and minor inventive activities can help technologcial latecomers to catch up and how this interacts with national and international intellectual property rights law. 
-        </p>
         <ul class="publist">
-          <li>
-            Jee &amp; Hötte (rev. 2025) <em>From catch-up to frontier: the utility model as a learning device to escape the middle-income trap</em>.
+          <li>Jee &amp; Hötte — <em>From catch‑up to frontier: the utility model as a learning device to escape the middle‑income trap</em>.
             <a href="https://arxiv.org/abs/2408.14205" target="_blank" rel="noopener">arXiv</a>
-            <div class="subtle">Shows how utility models seeded domestic capabilities in Korea and became less central as the economy matured.</div>
-          </li>
-          <li>
-            Jee, Hötte, Ring, Burrell (2024) <em>Making IPRs work for climate technology transfer & innovation in developing countries</em>.
-            <a href="https://arxiv.org/pdf/2408.12338" target="_blank" rel="noopener">arXiv</a>
-            <div class="subtle">Finds limited role for patents; highlights trademarks & utility models and tailored policy mixes for mitigation vs. adaptation.</div>
-          </li>
+            <div class="subtle">UMs seeded domestic capabilities in Korea; learning effect declines as the economy matures.</div></li>
+          <li>Jee, Hötte, Ring, Burrell — <em>Making IPRs work for climate technology transfer & innovation in developing countries</em>.
+            <a href="https://arxiv.org/pdf/2408.12338" target="_blank" rel="noopener">arXiv PDF</a>
+            <div class="subtle">Review + interviews; emphasises role of trademarks & utility models; policy varies by mitigation vs. adaptation.</div></li>
         </ul>
-        <p class="subtle">See also: Hötte, Theodorakopoulos &amp; Koutroumpis (2024) <em>Automation and taxation</em>, OEP
-          <a href="https://academic.oup.com/oep/article/76/4/945/7630148" target="_blank" rel="noopener">Article</a>.</p>
       </section>
 
-      <!-- UNDER REVIEW + WIP -->
       <section class="card" id="under-review">
         <h2>Under review (with short descriptions)</h2>
         <ul class="publist">
-          <li>
-            Barbieri, Hötte, Persoon — <em>The evolving boundary of green technologies</em>.
-            <a href="https://arxiv.org/abs/2503.21310" target="_blank" rel="noopener">arXiv</a>
-            <div class="subtle">Shows how reclassifications, CPC adoption delays, and quality cut-offs bias green patent counts; finds acceleration with a shift towards Asia.</div>
-          </li>
-          <li>
-            Jee &amp; Hötte — <em>From catch-up to frontier: the utility model as a learning device…</em>
-            <a href="https://arxiv.org/abs/2408.14205" target="_blank" rel="noopener">arXiv</a>
-            <div class="subtle">UM-based learning in Korea increased impact of later frontier patents; effect declines as capabilities mature; fosters domestic specialisation.</div>
-          </li>
-          <li>
-            Hötte, Mantziou, Cucuringu, Reinert — <em>Economic nowcasting with inter-industry payment data using a network approach</em>.
-            <a href="https://arxiv.org/abs/2411.02029" target="_blank" rel="noopener">arXiv</a>
-            <div class="subtle">Network-aware GNAR-ex model on UK payments; improves macro and industry-level GDP nowcasts, robust to statistical revisions.</div>
-          </li>
-          <li>
-            Jee, Hötte, Ring, Burrell — <em>Making IPRs work for climate technology transfer & innovation…</em>
-            <a href="https://arxiv.org/pdf/2408.12338" target="_blank" rel="noopener">arXiv PDF</a>
-            <div class="subtle">Systematic review + interviews: patents limited; emphasises trademarks, utility models and policy frameworks tailored to mitigation vs. adaptation.</div>
-          </li>
+          <li><em>The evolving boundary of green technologies</em> — with
+            <a href="https://scholar.google.com/citations?hl=en&user=M1EuuKQAAAAJ" target="_blank" rel="noopener">Nicolò Barbieri</a> and
+            <a href="https://research.tue.nl/en/persons/peter-persoon" target="_blank" rel="noopener">Peter G.J. Persoon</a>.
+            <a href="https://arxiv.org/abs/2503.21310" target="_blank" rel="noopener">arXiv</a>.
+            <div class="subtle">Shows how reclassifications, CPC timing and quality cut‑offs bias green patent counts; acceleration with a shift towards Asia.</div></li>
+          <li><em>From catch‑up to frontier: the utility model as a learning device…</em> — with
+            <span class="subtle">S.J. Jee — professional link to be added</span>.
+            <a href="https://arxiv.org/abs/2408.14205" target="_blank" rel="noopener">arXiv</a>.
+            <div class="subtle">Utility models spur capability formation; later frontier shift reduces reliance on UMs.</div></li>
+          <li><em>Economic nowcasting with inter‑industry payment data using a network approach</em> — with
+            <a href="https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/mantziou/" target="_blank" rel="noopener">Anastasia Mantziou</a>,
+            <a href="https://www.stats.ox.ac.uk/~cucuring/" target="_blank" rel="noopener">Mihai Cucuringu</a>,
+            <a href="https://www.stats.ox.ac.uk/~reinert/" target="_blank" rel="noopener">Gesine Reinert</a>.
+            <a href="https://arxiv.org/abs/2411.02029" target="_blank" rel="noopener">arXiv</a>.
+            <div class="subtle">Network‑aware GNAR‑ex model; improves macro & sector nowcasts, robust to revisions.</div></li>
+          <li><em>Making IPRs work for climate technology transfer & innovation…</em> — with
+            <span class="subtle">coauthor links to be added</span>.
+            <a href="https://arxiv.org/pdf/2408.12338" target="_blank" rel="noopener">arXiv PDF</a>.
+            <div class="subtle">Review + interviews; emphasises role of trademarks & utility models for diffusion.</div></li>
         </ul>
       </section>
 
       <section class="card" id="wip">
         <h2>Work in progress</h2>
         <ul class="publist">
-          <li><strong>Reclassifications and the diffusion of codified knowledge</strong> (with N. Barbieri). <span class="subtle">Placeholder: brief description of identification & diffusion effects coming soon.</span></li>
-          <li><strong>Dissecting inflation in large-scale payment network data</strong> (with P. Mundt). <span class="subtle">Placeholder: price-vs-network propagation channels.</span></li>
-          <li><strong>Global value-chain architecture & transition dynamics</strong> (with S.J. Jee). <span class="subtle">Placeholder: sustainable mobility application.</span></li>
-          <li><strong>Climate risk disclosure & firm-level innovation strategies</strong> (with M. Leusin, T. Wendler). <span class="subtle">Placeholder: disclosure regimes & green R&D.</span></li>
+          <li><strong>Reclassifications and the diffusion of codified knowledge</strong> (with
+            <a href="https://scholar.google.com/citations?hl=en&user=M1EuuKQAAAAJ" target="_blank" rel="noopener">Nicolò Barbieri</a>). <span class="subtle">Placeholder: identification & diffusion effects.</span></li>
+          <li><strong>Dissecting inflation in large‑scale payment network data</strong> (with
+            <a href="https://www.uni-leipzig.de/en/profile/mitarbeiter/pd-dr-philipp-mundt" target="_blank" rel="noopener">Philipp Mundt</a>). <span class="subtle">Placeholder: price vs. network propagation.</span></li>
+          <li><strong>Global value‑chain architecture & transition dynamics</strong> (with
+            <span class="subtle">S.J. Jee — professional link to be added</span>). <span class="subtle">Placeholder: sustainable mobility application.</span></li>
+          <li><strong>Climate risk disclosure & firm‑level innovation strategies</strong> (with
+            <span class="subtle">M. Leusin — professional link to be added</span>, <a href="https://www.researchgate.net/profile/Tobias-Wendler" target="_blank" rel="noopener">T. Wendler</a>). <span class="subtle">Placeholder: disclosure regimes & green R&D.</span></li>
         </ul>
       </section>
 
@@ -177,10 +173,21 @@
 
     <footer>© <span id="y"></span> Kerstin Hötte</footer>
   </div>
-
   <script>
-    // year
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+  (function () {
+    const root=document.documentElement, KEY="theme", btn=document.getElementById("toggle");
+    function apply(t){ root.setAttribute("data-theme", t); if(btn){ btn.textContent = t==="dark"?"🌙 Dark":t==="light"?"☀️ Light":"🌓 System"; } }
+    function cycle(){
+      const c = root.getAttribute("data-theme") || "system";
+      const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const next = c==="system" ? (prefersDark ? "light" : "dark") : (c==="dark" ? "light" : "system");
+      localStorage.setItem(KEY, next);
+      apply(next);
+    }
+    const saved = localStorage.getItem(KEY);
+    apply(saved || "system");
+    if (btn) btn.addEventListener("click", cycle);
+  })();
+ document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
