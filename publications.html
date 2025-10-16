@@ -6,12 +6,24 @@
   <title>Publications — Kerstin Hötte</title>
   <meta name="color-scheme" content="light dark" />
   <style>
-  :root { --bg:#fff; --fg:#0f172a; --muted:#475569; --link:#0ea5e9; --card:#f8fafc; --border:#e2e8f0; --btn:#111827; --btn-fg:#fff; }
-  @media (prefers-color-scheme: dark) {
-    :root { --bg:#0b1220; --fg:#e5e7eb; --muted:#94a3b8; --link:#38bdf8; --card:#0f172a; --border:#1f2937; --btn:#1f2937; --btn-fg:#e2e8f0; }
+  :root {
+    --bg:#fff; --fg:#0f172a; --muted:#475569; --link:#0a66ff; /* higher contrast blue */
+    --card:#f8fafc; --border:#e2e8f0; --btn:#111827; --btn-fg:#fff;
   }
-  [data-theme="dark"] { --bg:#0b1220; --fg:#e5e7eb; --muted:#94a3b8; --link:#38bdf8; --card:#0f172a; --border:#1f2937; --btn:#1f2937; --btn-fg:#e2e8f0; }
-  [data-theme="light"] { --bg:#fff; --fg:#0f172a; --muted:#475569; --link:#0ea5e9; --card:#f8fafc; --border:#e2e8f0; --btn:#111827; --btn-fg:#fff; }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg:#0b1220; --fg:#e5e7eb; --muted:#94a3b8; --link:#9ecbff; /* brighter for dark mode */
+      --card:#0f172a; --border:#1f2937; --btn:#1f2937; --btn-fg:#e2e8f0;
+    }
+  }
+  [data-theme="dark"] {
+    --bg:#0b1220; --fg:#e5e7eb; --muted:#94a3b8; --link:#9ecbff;
+    --card:#0f172a; --border:#1f2937; --btn:#1f2937; --btn-fg:#e2e8f0;
+  }
+  [data-theme="light"] {
+    --bg:#fff; --fg:#0f172a; --muted:#475569; --link:#0a66ff;
+    --card:#f8fafc; --border:#e2e8f0; --btn:#111827; --btn-fg:#fff;
+  }
 
   body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial; background:var(--bg); color:var(--fg);}
   .wrap{max-width:980px;margin:0 auto;padding:24px}
@@ -22,6 +34,7 @@
   .publist li{background:var(--card); border:1px solid var(--border); border-radius:12px; padding:12px; list-style:disc}
   .theme-toggle{display:inline-flex; align-items:center; gap:8px; cursor:pointer; user-select:none;
        border:1px solid var(--border); padding:6px 10px; border-radius:10px; background:transparent; font-weight:600}
+  a{color:var(--link); text-decoration: underline; text-decoration-thickness:.12em; text-underline-offset:2px}
   footer{margin-top:24px; color:var(--muted); font-size:14px}
   </style>
 </head>
@@ -38,59 +51,59 @@
 
     <h2>Journal articles</h2>
     <ul class="publist">
-      <li>Hötte, K., Tarannum, T., Verendel, V., Bennett, L., <a href="https://doi.org/10.48550/arXiv.2204.10304" target="_blank" rel="noopener">“Measuring artificial intelligence: a systematic assessment and implications for governance”</a>, <strong>Industrial and Corporate Change</strong> (forthcoming, 2025).</li>
-      <li>Hötte, K., <a href="https://doi.org/10.1080/09535314.2025.2518944" target="_blank" rel="noopener">“Mapping the disaggregated economy in real-time: using granular payment network data to complement national accounts”</a>, <strong>Economic Systems Research</strong>, 37(3), 2025.</li>
-      <li>Schulz, J., Hötte, K., Mayerhoffer, D., <a href="https://doi.org/10.1007/s43253-024-00128-y" target="_blank" rel="noopener">“Pluralist economics in an era of polycrisis”</a>, <strong>Review of Evolutionary Political Economy</strong>, Editorial, 2024.</li>
-      <li>Hötte, K., Theodorakopoulos, A., Koutroumpis, P., <a href="https://doi.org/10.1093/oep/gpae006" target="_blank" rel="noopener">“Automation and Taxation.”</a> <strong>Oxford Economic Papers</strong>, 2024.</li>
-      <li>Hötte, K., Somers, M., Theodorakopoulos, A., <a href="https://doi.org/10.1016/j.techfore.2023.122750" target="_blank" rel="noopener">“Technology and jobs: A systematic literature review”</a>, <strong>Technological Forecasting and Social Change</strong>, 194, 2023.</li>
-      <li>Hötte, K., <a href="https://doi.org/10.1016/j.respol.2023.104740" target="_blank" rel="noopener">“Demand-pull, technology-push, and the direction of technological change”</a>, <strong>Research Policy</strong>, 52(5), 2023.</li>
-      <li>Hötte, K., Jee, S.J., <a href="https://doi.org/10.1016/j.techfore.2022.121879" target="_blank" rel="noopener">“Knowledge for a warmer world: a patent analysis of climate change adaptation technologies”</a>, <strong>TFSC</strong>, 138, 2022.</li>
-      <li>Hötte, K., Pichler, A., Lafond, F., <a href="https://doi.org/10.1016/j.rser.2020.110654" target="_blank" rel="noopener">“The rise of science in low-carbon energy technologies”</a>, <strong>Renewable and Sustainable Energy Reviews</strong>, 139, 2021.</li>
-      <li>Hötte, K., <a href="https://link.springer.com/article/10.1007/s00191-020-00710-7" target="_blank" rel="noopener">“Skill transferability and the stability of transition pathways…”</a>, <strong>Journal of Evolutionary Economics</strong>, 31(3), 2021.</li>
-      <li>Hötte, K., <a href="https://doi.org/10.1016/j.eist.2020.05.001" target="_blank" rel="noopener">“The economics of transition pathways…”</a>, <strong>EIST</strong>, 36, 2020.</li>
-      <li>Hötte, K., <a href="https://doi.org/10.1016/j.eneco.2019.104565" target="_blank" rel="noopener">“How to accelerate green technology diffusion? …”</a> <strong>Energy Economics</strong>, 85, 2020.</li>
+      <li><strong><a href="https://doi.org/10.48550/arXiv.2204.10304" target="_blank" rel="noopener">Measuring artificial intelligence: a systematic assessment and implications for governance</a></strong>. Industrial and Corporate Change (forthcoming, 2025). Hötte, K., Tarannum, T., Verendel, V., Bennett, L.</li>
+      <li><strong><a href="https://doi.org/10.1080/09535314.2025.2518944" target="_blank" rel="noopener">Mapping the disaggregated economy in real-time: using granular payment network data to complement national accounts</a></strong>. Economic Systems Research, 37(3), 2025. Hötte, K.</li>
+      <li><strong><a href="https://doi.org/10.1007/s43253-024-00128-y" target="_blank" rel="noopener">Pluralist economics in an era of polycrisis</a></strong>. Review of Evolutionary Political Economy, 2024 (Editorial). Schulz, J., Hötte, K., Mayerhoffer, D.</li>
+      <li><strong><a href="https://doi.org/10.1093/oep/gpae006" target="_blank" rel="noopener">Automation and Taxation</a></strong>. Oxford Economic Papers, 2024. Hötte, K., Theodorakopoulos, A., Koutroumpis, P.</li>
+      <li><strong><a href="https://doi.org/10.1016/j.techfore.2023.122750" target="_blank" rel="noopener">Technology and jobs: A systematic literature review</a></strong>. Technological Forecasting and Social Change, 194, 2023. Hötte, K., Somers, M., Theodorakopoulos, A.</li>
+      <li><strong><a href="https://doi.org/10.1016/j.respol.2023.104740" target="_blank" rel="noopener">Demand-pull, technology-push, and the direction of technological change</a></strong>. Research Policy, 52(5), 2023. Hötte, K.</li>
+      <li><strong><a href="https://doi.org/10.1016/j.techfore.2022.121879" target="_blank" rel="noopener">Knowledge for a warmer world: a patent analysis of climate change adaptation technologies</a></strong>. Technological Forecasting and Social Change, 138, 2022. Hötte, K., Jee, S. J.</li>
+      <li><strong><a href="https://doi.org/10.1016/j.rser.2020.110654" target="_blank" rel="noopener">The rise of science in low-carbon energy technologies</a></strong>. Renewable and Sustainable Energy Reviews, 139, 2021. Hötte, K., Pichler, A., Lafond, F.</li>
+      <li><strong><a href="https://link.springer.com/article/10.1007/s00191-020-00710-7" target="_blank" rel="noopener">Skill transferability and the stability of transition pathways — A learning-based explanation for patterns of diffusion</a></strong>. Journal of Evolutionary Economics, 31(3), 2021. Hötte, K.</li>
+      <li><strong><a href="https://doi.org/10.1016/j.eist.2020.05.001" target="_blank" rel="noopener">The economics of transition pathways: A proposed taxonomy and a policy experiment</a></strong>. Environmental Innovation and Societal Transitions, 36, 2020. Hötte, K.</li>
+      <li><strong><a href="https://doi.org/10.1016/j.eneco.2019.104565" target="_blank" rel="noopener">How to accelerate green technology diffusion? Directed technological change in the presence of coevolving absorptive capacity</a></strong>. Energy Economics, 85, 2020. Hötte, K.</li>
     </ul>
 
     <h2>Under review</h2>
     <ul class="publist">
-      <li>Barbieri, N., Hötte, K., Persoon, P., <a href="https://arxiv.org/abs/2503.21310" target="_blank" rel="noopener">“The evolving boundary of green technologies”</a>, preprint arXiv:2503.21310, 2025.</li>
-      <li>Jee, S.J., Hötte, K., <a href="https://arxiv.org/abs/2408.14205" target="_blank" rel="noopener">“From catch-up to frontier…”</a>, preprint arXiv:2408.14205. <strong>Revise &amp; resubmit</strong>, Research Policy, 2024.</li>
-      <li>Hötte, K., Mantziou, A., Cucuringu, M., Reinert, G., <a href="https://arxiv.org/abs/2411.02029" target="_blank" rel="noopener">“Economic nowcasting with large-scale inter-industry payment data…”</a>, preprint arXiv:2411.02029. <strong>Revise &amp; resubmit</strong>, JRSS-A, 2024.</li>
-      <li>Jee, S.J., Hötte, K., Ring, C., Burrell, R., <a href="https://arxiv.org/pdf/2408.12338" target="_blank" rel="noopener">“Making IPRs work for climate technology transfer…”</a>, preprint arXiv:2408.12338, 2023.</li>
+      <li><strong><a href="https://arxiv.org/abs/2503.21310" target="_blank" rel="noopener">The evolving boundary of green technologies</a></strong>. Preprint arXiv:2503.21310, 2025. Barbieri, N., Hötte, K., Persoon, P.</li>
+      <li><strong><a href="https://arxiv.org/abs/2408.14205" target="_blank" rel="noopener">From catch-up to frontier: The utility model as a learning device to escape the middle-income trap</a></strong>. Preprint arXiv:2408.14205; Revise &amp; resubmit at Research Policy, 2024. Jee, S. J., Hötte, K.</li>
+      <li><strong><a href="https://arxiv.org/abs/2411.02029" target="_blank" rel="noopener">Economic nowcasting with large-scale inter-industry payment data using a network approach</a></strong>. Preprint arXiv:2411.02029; Revise &amp; resubmit at Journal of the Royal Statistical Society: Series A, 2024. Hötte, K., Mantziou, A., Cucuringu, M., Reinert, G.</li>
+      <li><strong><a href="https://arxiv.org/pdf/2408.12338" target="_blank" rel="noopener">Making intellectual property rights work for climate technology transfer and innovation in developing countries</a></strong>. Preprint arXiv:2408.12338, 2023. Jee, S. J., Hötte, K., Ring, C., Burrell, R.</li>
     </ul>
 
     <h2>PhD thesis</h2>
     <ul class="publist">
-      <li>Hötte, K. <a href="https://pub.uni-bielefeld.de/record/2946054" target="_blank" rel="noopener">“Facilitation of change: Macroeconomic studies of technology transitions.”</a> Bielefeld University, 2020.</li>
+      <li><strong><a href="https://pub.uni-bielefeld.de/record/2946054" target="_blank" rel="noopener">Facilitation of change: Macroeconomic studies of technology transitions</a></strong>. Bielefeld University, 2020. Hötte, K.</li>
     </ul>
 
     <h2>Technical reports</h2>
     <ul class="publist">
-      <li>Hötte, K. <a href="https://arxiv.org/abs/2508.17695" target="_blank" rel="noopener">“Revisiting Hötte (2025): Companion Analysis…”</a>, arXiv:2508.17695, 2025.</li>
-      <li>Hötte, K. <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3403510" target="_blank" rel="noopener">“Eurace@uibi-eco: A model for technology transitions. v1.1”</a>, Bielefeld Working Papers No. 08-2019.</li>
+      <li><strong><a href="https://arxiv.org/abs/2508.17695" target="_blank" rel="noopener">Revisiting Hötte (2025): A Companion Analysis with Extended Evidence from UK Inter-Industry Payment Data, 2017–2024</a></strong>. arXiv:2508.17695, 2025. Hötte, K.</li>
+      <li><strong><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3403510" target="_blank" rel="noopener">Eurace@uibi-eco: A model for technology transitions. v1.1, Model documentation</a></strong>. Bielefeld Working Papers in Economics and Management No. 08-2019, 2019. Hötte, K.</li>
     </ul>
 
     <h2>Policy briefs</h2>
     <ul class="publist">
-      <li>Hötte, K. <a href="https://feps-europe.eu/wp-content/uploads/2023/02/PB_Climate-and-Digital-policy.pdf" target="_blank" rel="noopener">“Climate Mainstreaming: Climate and digital policy”</a>, FEPS Policy Brief (2023).</li>
-      <li>Hötte, K., Theodorakoupoulos, A., <a href="https://technequality-project.eu/files/d74fdtaxingrobotsv1031-12-2021pdf" target="_blank" rel="noopener">“Technequality Policy Brief 4: Taxing robots?”</a>, EU Horizon 2020 (2021).</li>
+      <li><strong><a href="https://feps-europe.eu/wp-content/uploads/2023/02/PB_Climate-and-Digital-policy.pdf" target="_blank" rel="noopener">Climate Mainstreaming: Climate and digital policy</a></strong>. FEPS Policy Brief, 2023. Hötte, K.</li>
+      <li><strong><a href="https://technequality-project.eu/files/d74fdtaxingrobotsv1031-12-2021pdf" target="_blank" rel="noopener">Technequality Policy Brief 4: Taxing robots?</a></strong>. EU Horizon 2020 Deliverable, 2021. Hötte, K., Theodorakopoulos, A.</li>
     </ul>
 
     <h2>Other published work</h2>
     <ul class="publist">
-      <li>Hötte, K., Theodorakoupoulos, A., <a href="https://technequality-project.eu/files/d53fdeffectonpublicfinancesv1022-12-2021pdf" target="_blank" rel="noopener">“Which governments will be most affected by automation?”</a>, Technequality Paper (2021).</li>
-      <li>Hötte, K., <a href="https://bit.ly/2Z1Zwkp" target="_blank" rel="noopener">“Economists for future: A new agenda for Climate Economics”</a>, EAEPE/YSI (2019).</li>
-      <li>Hötte, K., <a href="https://www.researchgate.net/publication/330534871_Testing_for_a_double_dividend_Can_revenue-neutral_carbon_taxes_be_used_to_reduce_pre-existing_tax_distortions" target="_blank" rel="noopener">“Testing for a double dividend…”</a>, Master thesis (2016).</li>
-      <li>Albrecht, A. M., Beck, A., Hager, K., Hötte, K., Henschke, J., Selinger, M., Walch, S., <a href="https://www.dropbox.com/s/u3lo5g1jdjtp2yd/Strategiepapier_Nachhaltige_Mobilit%C3%A4t_in_Baden_W%C3%BCrttemberg.pdf?dl=0" target="_blank" rel="noopener">“Nachhaltige Mobilität in Baden-Württemberg”</a> (2012).</li>
+      <li><strong><a href="https://technequality-project.eu/files/d53fdeffectonpublicfinancesv1022-12-2021pdf" target="_blank" rel="noopener">Which governments will be most affected by automation?</a></strong>. Technequality Paper 2021/15, 2021. Hötte, K., Theodorakopoulos, A.</li>
+      <li><strong><a href="https://bit.ly/2Z1Zwkp" target="_blank" rel="noopener">Economists for future: A new agenda for Climate Economics</a></strong>. EAEPE–YSI Special Session Paper, 2019. Hötte, K.</li>
+      <li><strong><a href="https://www.researchgate.net/publication/330534871_Testing_for_a_double_dividend_Can_revenue-neutral_carbon_taxes_be_used_to_reduce_pre-existing_tax_distortions" target="_blank" rel="noopener">Testing for a double dividend: Can revenue-neutral carbon taxes be used to reduce pre-existing tax distortions?</a></strong>. Master thesis, 2016. Hötte, K.</li>
+      <li><strong><a href="https://www.dropbox.com/s/u3lo5g1jdjtp2yd/Strategiepapier_Nachhaltige_Mobilit%C3%A4t_in_Baden_W%C3%BCrttemberg.pdf?dl=0" target="_blank" rel="noopener">Nachhaltige Mobilität in Baden-Württemberg</a></strong>. 2012. Albrecht, A. M., Beck, A., Hager, K., Hötte, K., Henschke, J., Selinger, M., Walch, S.</li>
     </ul>
 
     <h2>Research data &amp; code</h2>
     <ul class="publist">
-      <li>Hötte, K. <a href="https://doi.org/10.4119/unibi/2967659" target="_blank" rel="noopener">“Data: Demand-pull, technology-push…”</a> Bielefeld University (2023).</li>
-      <li>Hötte, K., Jee, S.J., Srivastav, S. <a href="https://doi.org/10.4119/unibi/2958327" target="_blank" rel="noopener">“Data: Adaptation technologies (patents)”</a> Bielefeld University (2021).</li>
-      <li>Hötte, K., Pichler, A., Lafond, F., <a href="https://pub.uni-bielefeld.de/record/2941555" target="_blank" rel="noopener">“Data: Low-carbon energy technologies”</a>, Bielefeld (2020).</li>
-      <li>Hötte, K. <a href="https://pub.uni-bielefeld.de/record/2935425" target="_blank" rel="noopener">“Data: Skill transferability & technology adoption”</a>, Bielefeld (2019).</li>
-      <li>Hötte, K. <a href="https://pub.uni-bielefeld.de/record/2932844" target="_blank" rel="noopener">“Data: Directed technological change & absorptive capacity”</a>, Bielefeld (2019).</li>
+      <li><strong><a href="https://doi.org/10.4119/unibi/2967659" target="_blank" rel="noopener">Data publication: Demand-pull, technology-push, and the direction of technological change</a></strong>. Bielefeld University, 2023. Hötte, K.</li>
+      <li><strong><a href="https://doi.org/10.4119/unibi/2958327" target="_blank" rel="noopener">Data publication: Knowledge for a warmer world: a patent analysis of climate change adaptation technologies</a></strong>. Bielefeld University, 2021. Hötte, K., Jee, S. J., Srivastav, S.</li>
+      <li><strong><a href="https://pub.uni-bielefeld.de/record/2941555" target="_blank" rel="noopener">Data Publication: The scientific knowledge base of low carbon energy technologies</a></strong>. Bielefeld University, 2020. Hötte, K., Pichler, A., Lafond, F.</li>
+      <li><strong><a href="https://pub.uni-bielefeld.de/record/2935425" target="_blank" rel="noopener">Data publication for: Skill transferability and the adoption of new technology</a></strong>. Bielefeld University, 2019. Hötte, K.</li>
+      <li><strong><a href="https://pub.uni-bielefeld.de/record/2932844" target="_blank" rel="noopener">Data publication for: How to accelerate green technology diffusion? An agent-based approach to directed technological change with coevolving absorptive capacity</a></strong>. Bielefeld University, 2019. Hötte, K.</li>
     </ul>
 
     <footer>© <span id="y"></span> Kerstin Hötte</footer>
